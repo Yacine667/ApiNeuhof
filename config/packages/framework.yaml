@@ -21,7 +21,7 @@ framework:
     http_client:
         scoped_clients:
             nhf:
-                base_uri: http://127.0.0.1:8001/api
+                base_uri: http://127.0.0.1:8000/api
 
 when@test:
     framework:
