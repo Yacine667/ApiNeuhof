@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+    {% for actu in data %}
+                    
+        <h2>{{ actu.titre_actualite }}</h2>
+        <p>{{ actu.texte_actualite }}</p>
+                        
+    {% endfor %}
+
+{% endblock %}
