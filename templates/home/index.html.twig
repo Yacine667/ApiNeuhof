@@ -4,11 +4,28 @@
 
 {% block body %}
 
-    {% for actu in data %}
-                    
-        <h2>{{ actu.titre_actualite }}</h2>
-        <p>{{ actu.texte_actualite }}</p>
-                        
-    {% endfor %}
+<section class="indexActualite">
 
+    <h2> Toutes Les Actualités Du Club </h2>
+
+    <div class="actuContainer">
+
+     {% for actualite in actualites %}
+
+        <div class="item">
+
+            <div class="item-desc">
+                    
+                <h3> {{ actualite.titre_actualite }} </h3>
+                <p> {{ actualite.texte_actualite }} </p>
+
+            </div>
+
+        </div>
+                        
+     {% endfor %}
+
+    </div>
+
+</section>
 {% endblock %}

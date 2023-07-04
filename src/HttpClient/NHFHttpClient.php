@@ -24,7 +24,7 @@ class NHFHttpClient extends AbstractController {
         $this->httpClient = $nhf;
     }
 
-    public function getGames(){
+    public function getActus(){
 
         
         $response = $this->httpClient->request('GET', "/api/actualites.json", [
@@ -34,14 +34,6 @@ class NHFHttpClient extends AbstractController {
         return $response->getContent();       
     }
 
-    public function getGame($search){
-
-        $client_id = $this->getParameter('client_id');
-        $response = $this->httpClient->request('GET', "/api/search?ids=$search&pretty=true&client_id=$client_id", [
-            'verify_peer' => false,
-        ]);
-        return $response->getContent();
-    }
 
 }
 ?>
